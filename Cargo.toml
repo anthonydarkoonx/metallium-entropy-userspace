@@ -1,0 +1,16 @@
+[package]
+name = "metallium-entropy"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0 OR MIT"
+description = "The Metallium-OS entropy driver (role 20): a virtio-rng device driven from user space, feeding the kernel's generator with ADD_ENTROPY"
+
+[dependencies]
+# the OS repository, checked out next to this one (see README.md)
+metallium-driver-rt = { path = "../metallium-os/libs/metallium-driver-rt" }
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+
+[lints.clippy]
+undocumented_unsafe_blocks = "deny"
